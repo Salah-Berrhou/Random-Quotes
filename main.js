@@ -1,5 +1,17 @@
 let quotes = getQuotes()
 
+const quotesRender = function(quotes){
+
+    document.querySelector('#quotesList').innerHTML = ''
+
+    quotes.forEach(function(quote){
+        let quoteEl = document.createElement('p')
+        quoteEl.textContent = quote
+        return document.querySelector('#quotesList').appendChild(quoteEl)
+    })
+}
+
+quotesRender(quotes)
 
 
 document.querySelector('#random').addEventListener('click', function(){
@@ -17,6 +29,7 @@ document.querySelector('#submit-quote').addEventListener('submit', function(e){
 
     e.target.elements.quoteText.value = ''
     
+    quotesRender(quotes)
 })
 
 let removeAll = function(quotes){
@@ -26,5 +39,6 @@ let removeAll = function(quotes){
 
 document.querySelector('#remove').addEventListener('click', function(){
     removeAll(quotes)
+    document.querySelector('#quotesList').innerHTML = ''
 })
 
