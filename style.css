@@ -2,7 +2,7 @@
 
 
 body{
-    background: linear-gradient(to right bottom, #2ecc71, #e67e22);
+    background: #2f3640;
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
 
@@ -22,6 +22,9 @@ h1{
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .container{
@@ -40,8 +43,8 @@ button:hover{
     background: #38c070;
 }
 p{
-    color: white;
-    font-size: 2rem;
+    color: black;
+    font-size: 2.2rem;
 }
 
 form{
@@ -56,4 +59,23 @@ form{
 }
 #sub-btn{
     width: 10%;
+}
+
+#quotesList div{
+    background: #353b48;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2f3640;
+}
+#quotesList div p {
+    color: white;
+    display: inline-block;
+    margin: 2px;
+}
+#quotesList div button {
+    
+    text-align: center;
+    
 }
