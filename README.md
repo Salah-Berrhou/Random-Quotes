@@ -3,3 +3,7 @@ Random Quotes it's an application that give you tha ability to add your own quot
 there is a lot of features that will come,
 there is some bugs and i'm working at removing them,
 #100DaysOfCode
+# Third version
+I change the style to a modern one, and I fixed a lot of bugs, and I add more feautres like removing just one quote and not all of them,
+# Coming tomorrow
+now i'm working on making the app more random, and i want to add a feature  that allow you to chose what quotes you want to generate without removing the ohers
