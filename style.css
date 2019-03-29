@@ -79,3 +79,9 @@ form{
     text-align: center;
     
 }
+button:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}

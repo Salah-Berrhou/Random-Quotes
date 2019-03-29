@@ -1,35 +1,17 @@
 let quotes = getQuotes()
 
 
-
+//render quotes in the white box
 const quotesRender = function(quotes){
-
     document.querySelector('#quotesList').innerHTML = ''
-
     quotes.forEach(function(quote){
-        let quoteBox = document.createElement('div')
-        let quoteEl = document.createElement('p')
-        let removeQuote = document.createElement('button')
-
-        quoteEl.textContent = quote.text
-        quoteBox.appendChild(quoteEl)
-
-        removeQuote.textContent = 'x'
-        removeQuote.setAttribute('id', '#remove-quote')
-        removeQuote.addEventListener('click', function(){
-            removeOneQuote(quote.id)
-            localStorage.setItem('quotes', JSON.stringify(quotes))
-            quotesRender(quotes)
-        })
-        quoteBox.appendChild(removeQuote)
-
-        return document.querySelector('#quotesList').appendChild(quoteBox)
+       quoteBox(quote)
     })
 }
 
 quotesRender(quotes)
 
-
+// random button activited
 document.querySelector('#random').addEventListener('click', function(){
     let randomIndex = Math.floor(Math.random() * (quotes.length - 0) + 0)
     console.log(randomIndex)
@@ -37,25 +19,24 @@ document.querySelector('#random').addEventListener('click', function(){
     randomQuotes(quotes, randomIndex)
 })
 
+// submit and get the new quote
 document.querySelector('#submit-quote').addEventListener('submit', function(e){
     e.preventDefault()
-
     quotes.push({
         text: e.target.elements.quoteText.value,
         id: quotes.length + 1
     })
-
-    localStorage.setItem('quotes', JSON.stringify(quotes))
-
+    saveQuotes()
     e.target.elements.quoteText.value = ''
-    
     quotesRender(quotes)
 })
 
+//remove all quotes
 let removeAll = function(quotes){
     localStorage.removeItem('quotes')
 }
 
+// remove one specific quote
 document.querySelector('#remove').addEventListener('click', function(){
     removeAll(quotes)
     location.assign('index.html')
