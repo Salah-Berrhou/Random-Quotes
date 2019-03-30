@@ -17,7 +17,7 @@ h1{
 #quotes{
     height: 400px;
     width: 700px;
-    margin: 200px auto;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,3 +85,35 @@ button:focus{
 input:focus{
     outline: none;
 }
+
+#filter{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#filterInput {
+    padding: 8px;
+    width: 30%;
+    border-radius: 8px;
+}
+label{
+    color: white;
+    font-size: 25px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      
+    }
+    #quotes{
+        width: 300px;
+        margin: 20px auto;
+    }
+    #quotesInput{
+        width: 100%;
+    }
+    #sub-btn{
+        width: 60%;
+    }
+  }
