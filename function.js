@@ -51,3 +51,14 @@ let quoteBox = function(quote){
 
     return document.querySelector('#quotesList').appendChild(quoteBox)
 }
+
+const quotesRender = function(quotes, filters){
+    
+    const filterdQuotes = quotes.filter(quote => quote.text.toLowerCase().includes(filters.searchText.toLowerCase()))
+    
+    document.querySelector('#quotesList').innerHTML = ''
+
+    filterdQuotes.forEach(function(quote){
+       quoteBox(quote)
+    })
+}

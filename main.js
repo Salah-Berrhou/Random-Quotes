@@ -1,15 +1,12 @@
 let quotes = getQuotes()
 
-
-//render quotes in the white box
-const quotesRender = function(quotes){
-    document.querySelector('#quotesList').innerHTML = ''
-    quotes.forEach(function(quote){
-       quoteBox(quote)
-    })
+let filters = {
+    searchText: '',
 }
+//render quotes in the white box
 
-quotesRender(quotes)
+quotesRender(quotes, filters)
+
 
 // random button activited
 document.querySelector('#random').addEventListener('click', function(){
@@ -28,7 +25,7 @@ document.querySelector('#submit-quote').addEventListener('submit', function(e){
     })
     saveQuotes()
     e.target.elements.quoteText.value = ''
-    quotesRender(quotes)
+    quotesRender(quotes, filters)
 })
 
 //remove all quotes
@@ -44,4 +41,8 @@ document.querySelector('#remove').addEventListener('click', function(){
     // document.querySelector('#quotesList').innerHTML = ''
 })
 
+document.querySelector('#filterInput').addEventListener('input', function(e){
+    filters.searchText = e.target.value
+    quotesRender(quotes, filters)
+})
 
