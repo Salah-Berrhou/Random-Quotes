@@ -64,7 +64,6 @@ form{
 #quotesList div{
     background: #353b48;
     padding: 8px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #2f3640;
@@ -73,11 +72,15 @@ form{
     color: white;
     display: inline-block;
     margin: 2px;
+    vertical-align: middle;
 }
 #quotesList div button {
-    
+    float: right;
     text-align: center;
     
+}
+#checkboxes{
+    vertical-align: middle;
 }
 button:focus{
     outline: none;
@@ -101,6 +104,12 @@ label{
     vertical-align: middle;
     font-weight: bold;
 }
+#cheackTip {
+    text-align: center;
+}
+#cheackTip p {
+    color: white;
+}
 
 @media only screen and (max-width: 600px) {
     body {
@@ -116,4 +125,11 @@ label{
     #sub-btn{
         width: 60%;
     }
+    #filterInput {
+        width: 60%;
+    }
+    #quotesList div{
+        display: flex;
+    }
+   
   }

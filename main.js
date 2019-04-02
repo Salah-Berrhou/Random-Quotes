@@ -10,10 +10,18 @@ quotesRender(quotes, filters)
 
 // random button activited
 document.querySelector('#random').addEventListener('click', function(){
-    let randomIndex = Math.floor(Math.random() * (quotes.length - 0) + 0)
-    console.log(randomIndex)
+    //cheack if the user cheacked so quote to generate if not show all
+    let trueQuote = quotes.filter(quote => quote.pressed === true)
+    let cheackedQuotes = quotes.filter(function(quote){
+        if(trueQuote.length >= 1){
+            return quote.pressed === true
+         }else{
+            return quote.pressed === false
+        }
+    })
+    let randomIndex = Math.floor(Math.random() * (cheackedQuotes.length - 0) + 0)
     getQuotes()
-    randomQuotes(quotes, randomIndex)
+    randomQuotes(cheackedQuotes, randomIndex)
 })
 
 // submit and get the new quote
@@ -21,7 +29,8 @@ document.querySelector('#submit-quote').addEventListener('submit', function(e){
     e.preventDefault()
     quotes.push({
         text: e.target.elements.quoteText.value,
-        id: quotes.length + 1
+        id: quotes.length + 1,
+        pressed: false
     })
     saveQuotes()
     e.target.elements.quoteText.value = ''
