@@ -8,5 +8,7 @@ I change the style to a modern one, and I fixed a lot of bugs, and I add more fe
 # version 0.4
 I add the ability to search quotes and remove the ones you want
 the app is now responsive.
+# version 0.5
+Now you can chose the quotes you want to randomly generate without removing the others
 # Coming tomorrow
 now i'm working on making the app more random, and i want to add a feature  that allow you to chose what quotes you want to generate without removing the ohers
