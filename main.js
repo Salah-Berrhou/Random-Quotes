@@ -1,8 +1,6 @@
 let quotes = getQuotes()
 
-let filters = {
-    searchText: '',
-}
+
 //render quotes in the white box
 
 quotesRender(quotes, filters)

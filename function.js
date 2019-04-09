@@ -1,3 +1,7 @@
+let filters = {
+    searchText: '',
+}
+
 let getQuotes = function(){
     let quotesJSON = localStorage.getItem('quotes')
     if(quotesJSON !== null){
@@ -57,7 +61,7 @@ let quoteBox = function(quote){
     removeQuote.addEventListener('click', function(){
         removeOneQuote(quote.id)
         saveQuotes()
-        quotesRender(quotes)
+        quotesRender(quotes, filters)
     })
     quoteBox.appendChild(removeQuote)
     //return the component
