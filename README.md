@@ -10,5 +10,7 @@ I add the ability to search quotes and remove the ones you want
 the app is now responsive.
 # version 0.5
 Now you can chose the quotes you want to randomly generate without removing the others
+# version 0.5.1
+I fixed a lillet bug that when you click remove a quote the quote won't be removed tell you refrech the page
 # Coming tomorrow
 now i'm working on making the app more random, and i want to add a feature  that allow you to chose what quotes you want to generate without removing the ohers
